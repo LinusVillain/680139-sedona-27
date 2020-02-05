@@ -19,7 +19,30 @@
       </nav>
     </header>
     <main>
-        <!---Здесь будет форма фильтра--->
+        <form>
+          <p>Инфрастуктура:</p>
+          <input type="checkbox" id="pool" name="infrastructure-pool" checked>
+          <label for="pool">Бассейн</label>
+          <input type="checkbox" id="parking" name="infrastructure-parking">
+          <label for="parking">Парковка</label>
+          <input type="checkbox" id="wi-fi" name="infrastructure-wi-fi">
+          <label for="wi-fi">Wi-Fi</label>
+          <p>Тип жилья:</p>
+          <input type="checkbox" id="hotel" name="type-hotel" checked>
+          <label for="hotel">Гостиница</label>
+          <input type="checkbox" id="motel" name="type-motel" checked>
+          <label for="motel">Мотель</label>
+          <input type="checkbox" id="apartments" name="type-apartments" checked>
+          <label for="apartments">Апартаменты</label>
+          <p>Стоимость в сутки (Р):</p>
+          <label for="from">Цена от:</label>
+          <input type="text" id="from" name="cost-from" value="от 0">
+          <label for="to">Цена до:</label>
+          <input type="text" id="to" name="cost-to" value="до 3000">
+          <label for="interval">От и до:</label>
+          <input type="range" id="interval" name="interval-cost" min="0" max="3500" step="1">
+          <input type="submit" value="Показать">
+        </form>
         <div>
           <b>Найдено: 3</b>
           <span>Сортировка:</span>
