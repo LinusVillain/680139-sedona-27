@@ -21,14 +21,16 @@
         <img src="#" alt="Добро пожаловать в Седону">
       </div>
       <section>
-        <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <div>
+          <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        </div>
             <ol>
               <li>
                 <h3>Настоящий городок</h3>
                 <span>№1</span>
                 <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-                <img src="img/sedona-city.jpg" width="800" height="256" alt="Город Седона">
+                <p><img src="img/sedona-city.jpg" width="800" height="256" alt="Город Седона"></p>
                 <ul>
                   <li>
                     <h4>Жильё</h4>
@@ -48,7 +50,7 @@
                 <h3>Там есть Мост дьявола</h3>
                 <span>№2</span>
                 <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-                <img src="img/bridge.jpg" width="800" height="256" alt="Мост Дьявола">
+                 <p><img src="img/bridge.jpg" width="800" height="256" alt="Мост Дьявола"></p>
               </li>
               <li>
                 <h3>Небольшая площадь</h3>
@@ -70,17 +72,27 @@
       <section>
         <b>Заинтересовались?</b>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button>Поиск гостиницы в Седоне</button>
+        <a href="#">Поиск гостиницы в Седоне</a>
         <form>
-          <label for="date-in">Дата заезда:</label>
-          <input type="date" id="date-in" name="arrival-date" value="2017-04-24">
-          <label for="date-out">Дата выезда:</label>
-          <input type="date" id="date-out" name="departure-date" value="2017-07-04">
-          <label for="adults">Взрослые:</label>
-          <input type="number" id="adults" name="amount-of-adults" min="1" step="1" value="2">
-          <label for="children">Дети:</label>
-          <input type="number" id="children" name="amount-of-children" min="0" step="1" value="0">
-          <input type="submit" value="Найти">
+          <p>
+            <label for="date-in">Дата заезда:</label>
+            <input type="text" id="date-in" name="arrival-date" value="24 апреля 2017">
+          </p>
+          <p>
+            <label for="date-out">Дата выезда:</label>
+            <input type="text" id="date-out" name="departure-date" value="4 июля 2017">
+          </p>
+          <p>
+            <label for="adults">Взрослые:</label>
+            <input type="number" id="adults" name="amount-of-adults" min="1" step="1" value="2">
+          </p>
+          <p>
+            <label for="children">Дети:</label>
+            <input type="number" id="children" name="amount-of-children" min="0" step="1" value="0">
+          </p>
+          <p>
+            <input type="submit" value="Найти">
+          </p>
         </form>
         <img src="img/map.jpg" width="1200" height="593" alt="Седона на карте">
       </section>
