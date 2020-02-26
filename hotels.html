@@ -23,9 +23,9 @@
         </nav>
       </header>
       <main>
-        <form>
+        <form class="filter">
           <fieldset>
-            <legend>Инфрастуктура:</legend>
+            <legend class="infrastructure">Инфрастуктура:</legend>
             <p>
               <input type="checkbox" id="pool" name="infrastructure-pool" checked>
               <label for="pool">Бассейн</label>
@@ -40,7 +40,7 @@
             </p>
           </fieldset>
           <fieldset>
-            <legend>Тип жилья:</legend>
+            <legend class="type-of-housing">Тип жилья:</legend>
             <p>
               <input type="checkbox" id="hotel" name="type-hotel" checked>
               <label for="hotel">Гостиница</label>
@@ -55,7 +55,7 @@
             </p>
           </fieldset>
           <fieldset>
-            <legend>Стоимость в сутки (Р):</legend>
+            <legend class="cost-per-day">Стоимость в сутки (Р):</legend>
             <p>
               <label for="from">от:</label>
               <input type="number" id="from" name="cost-from" value="0">
@@ -66,13 +66,13 @@
               <div class="range-min"></div>
               <div class="range-max"></div>
             </div>
-            <input type="submit" value="Показать">
+            <input class="button-show" type="submit" value="Показать">
           </fieldset>
         </form>
         <div>
-          <b>Найдено: 3</b>
-          <span>Сортировка:</span>
-          <ul>
+          <b class="founded">Найдено: 3</b>
+          <span class="sort">Сортировка:</span>
+          <ul class="sorting-filter">
             <li><a href="#">по цене</a></li>
             <li><a href="#">по типу</a></li>
             <li><a href="#">по рейтингу</a></li>
