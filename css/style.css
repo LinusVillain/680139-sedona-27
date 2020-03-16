@@ -29,20 +29,43 @@ a {
     background-color: #ffffff;
 }
 
+.main-navigation img {
+    position: absolute;
+    margin-left: 530px;
+    margin-right: 530px;
+}
+
 .site-navigation {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
+    width: 1200px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .site-navigation li {
     min-width: 239px;
     min-height: 56px;
+    text-align: center;
+    line-height: 56px;
+}
+
+.site-navigation li:first-child,
+.site-navigation li:nth-child(2) {
+    margin-left: 0px;
+    margin-right: auto;
+}
+
+.site-navigation li:nth-child(3),
+.site-navigation li:last-child {
+    margin-left: auto;
+    margin-right: 0px;
 }
 
 .site-navigation a {
     color: #000000;
     font-weight: bold;
-    text-align: center;
 }
 
 .site-navigation a:hover {
@@ -69,50 +92,46 @@ a {
 }
 
 .headline-introducing {
-    min-height: 216px;;
+    min-height: 216px;
+    padding-top: 50px;
+    padding-right: 300px;
+    padding-bottom: 50px;
+    padding-left: 300px;
+    box-sizing: border-box;
     background-color: #ffffff;
 }
 
 .headline {
     width: 440px;
-    height: 48px;
-    padding-top: 61px;
-    padding-right: 380px;
-    padding-bottom: 0px;
-    padding-left: 380px;
-}
-
-.headline h1{
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
     text-align: center;
-    margin: 0;
 }
 
 .introduce {
-    height: 13px;
-    color: #333333;
+    margin-top: 38px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
     text-align: center;
-    padding-top: 38px;
-    padding-right: 356px;
-    padding-bottom: 56px;
-    padding-left: 355px;
-}
-
-.introduce p {
-    margin: 0;
+    line-height: 26px;
+    color: #333333;
+   
 }
 
 .headline-introducing::before {
-    position: absolute;
     display: inline-block;
     content: " ";
     background-image: url("../img/intro-mask.svg");
     background-repeat: no-repeat;
-    width: 1203px;
+    width: 1200px;
     height: 59px;
-    margin-top: -56px;
+    margin-top: -59px;
 }
 
 .reasons {
@@ -140,26 +159,28 @@ a {
 
 .description {
     width: 400px;
-    height: 256px;
-    margin: 0px;
-    padding-top: 46px;
+    min-height: 256px;
+    padding-top: 45px;
     padding-right: 60px;
-    padding-bottom: 64px;
+    padding-bottom: 45px;
     padding-left: 60px;
     box-sizing: border-box;
 }
 
-.description h3,
-.description p {
-    margin: 0;
-}
-
 .description h3 {
+    width: 155px;
+    margin-top: 0px;
+    margin-right: auto;
     margin-bottom: 26px;
+    margin-left: auto;
 }
 
 .description p {
+    width: 280px;
     margin-top: 26px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
 }
 
 .description-image {
@@ -170,17 +191,19 @@ a {
 
 .additional-reasons {
     display: flex;
-    margin: 0;
     padding: 0;
     list-style: none;
     background-color: #ffffff;
 }
 
 .additional-reasons li {
-    margin: 0;
-    padding: 0;
     width: 400px;
     min-height: 330px;
+    padding-top: 60px;
+    padding-right: 55px;
+    padding-bottom: 60px;
+    padding-left: 55px;
+    box-sizing: border-box;
 }
 
 .small-area,
@@ -211,6 +234,24 @@ a {
     color: #333333;
 }
 
+.lodging .reason-headline,
+.food .reason-headline,
+.souvenirs .reason-headline {
+    margin-top: 30px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+
+.lodging .reason-essence,
+.food .reason-essence,
+.souvenirs .reason-essence {
+    margin-top: 30px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+
 .lodging::before {
     display: inline-block;
     content: "";
@@ -218,7 +259,6 @@ a {
     background-repeat: no-repeat;
     width: 75px;
     height: 72px;
-    margin-top: 60px;
 }
 
 .food::before {
@@ -228,7 +268,7 @@ a {
     background-repeat: no-repeat;
     width: 74px;
     height: 70px;
-    margin-top: 61px;
+    margin-top: 2px;
 }
 
 .souvenirs::before {
@@ -238,7 +278,7 @@ a {
     background-repeat: no-repeat;
     width: 64px;
     height: 76px;
-    margin-top: 56px;
+    margin-top: -3px;
 }
 
 .reason-number::before {
@@ -250,37 +290,41 @@ a {
 }
 
 .form-paragraph {
-    display: flex;
-    flex-direction: column;
     min-height: 291px;
-    padding: 0px;
+    padding-top: 57px;
+    padding-right: 300px;
+    padding-bottom: 0px;
+    padding-left: 300px;
+    box-sizing: border-box;
 }
 
 .form-title {
-    width: 434px;
-    text-align: center;
-    margin-top: 57px;
+    width: 450px;
+    min-height: 96px;
+    margin-top: 0px;
     margin-right: auto;
-    margin-bottom: 52px;
+    margin-bottom: 0px;
     margin-left: auto;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .form-headline {
     font-size: 30px;
     line-height: 36px;
-    text-align: center;
 }
 
 .form-description {
-    margin-top: 12px;
-    margin-right: -1px;
+    margin-top: 20px;
+    margin-right: auto;
     margin-bottom: 0px;
-    margin-left: -1px;
+    margin-left: auto;
     line-height: 24px;
 }
 
 .form-button {
-    margin-top: 0px;
+    display: block;
+    margin-top: 43.5px;
     margin-right: auto;
     margin-bottom: 0px;
     margin-left: auto;
@@ -426,7 +470,7 @@ a {
     background-color: #81b3d2;
     background-image: url("../img/background-hotels.jpg");
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: 0px -294px ;
 }
 
 .filter-checkbox {
@@ -707,9 +751,7 @@ a {
 }
 
 .phone {
-    margin-top: 36px;
-    margin-left: 132px;
-    margin-bottom: 32px;
+    margin-left: 123px;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -723,9 +765,7 @@ a {
 .contacts {
     display: flex;
     list-style: none;
-    margin-top: 36px;
-    margin-bottom: 36px;
-    margin-left: -31px;
+    margin-left: -40px;
     padding: 0px;
 }
 
@@ -752,14 +792,11 @@ a {
 .copyright {
     display: flex;
     align-items: center;
-    margin-top: 39px;
     margin-right: 101px;
-    margin-bottom: 40px;
 }
 
 .copyright p{
     display: flex;
-    margin: 0px;
     height: 41px;
     line-height: 41px;
     text-align: center;
