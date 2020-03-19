@@ -53,11 +53,11 @@ a {
 
 .site-navigation li:nth-child(2n) {
     margin-left: 0px;
-    margin-right: auto;
+    margin-right: 122px;
 }
 
-.site-navigation li:nth-child(3n) {
-    margin-left: auto;
+.site-navigation li:nth-child(4n-1) {
+    margin-left: 122px;
     margin-right: 0px;
 }
 
@@ -633,25 +633,26 @@ a {
     padding-left: 72px;
     box-sizing: border-box;
     width: 1200px;
-    height: 150px;
+    min-height: 150px;
     border-bottom: 1px solid #e5e5e5;
 }
 
 .hotel-wrapper {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    width: 423px;
 }
 
 .hotel-wrapper img {
-    order: -1;
     margin-right: 30px;
+}
+
+.hotel-info {
+    display: flex;
+    flex-direction: column;
 }
 
 .head-hotel-name {
     margin: 0px;
-    height: 16px;
     line-height: 16px;
 }
 
@@ -731,16 +732,16 @@ a {
     list-style: none;
     margin: 0px;
     padding: 0px;
+    margin-bottom: 47px;
 }
 
 .hotel-stars li {
     width: 18px;
     height: 17px;
-    margin-bottom: 47px;
     margin-left: 5px;
 }
 
-.rating p{
+.rating{
     width: 110px;
     margin: 0px;
     color: #666666;
