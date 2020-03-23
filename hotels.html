@@ -27,47 +27,48 @@
           <fieldset class="filter-infrastructure">
             <legend class="infrastructure">Инфрастуктура:</legend>
             <p>
-              <input type="checkbox" id="pool" name="infrastructure-pool" checked>
+              <input type="checkbox" id="pool" class="check-box visually-hidden" name="infrastructure-pool" checked>
               <label for="pool">Бассейн</label>
             </p>
             <p>
-              <input type="checkbox" id="parking" name="infrastructure-parking">
+              <input type="checkbox" id="parking" class="check-box visually-hidden" name="infrastructure-parking">
               <label for="parking">Парковка</label>
             </p>
             <p>
-              <input type="checkbox" id="wi-fi" name="infrastructure-wi-fi">
+              <input type="checkbox" id="wi-fi" class="check-box visually-hidden" name="infrastructure-wi-fi">
               <label for="wi-fi">Wi-Fi</label>
             </p>
           </fieldset>
           <fieldset class="filter-type-of-housing">
             <legend class="type-of-housing">Тип жилья:</legend>
             <p>
-              <input type="checkbox" id="hotel" name="type-hotel" checked>
+              <input type="checkbox" id="hotel" class="check-box visually-hidden" name="type-hotel" checked>
               <label for="hotel">Гостиница</label>
             </p>
             <p>
-              <input type="checkbox" id="motel" name="type-motel" checked>
+              <input type="checkbox" id="motel" class="check-box visually-hidden" name="type-motel" checked>
               <label for="motel">Мотель</label>
             </p>
             <p>
-              <input type="checkbox" id="apartments" name="type-apartments" checked>
+              <input type="checkbox" id="apartments" class="check-box visually-hidden" name="type-apartments" checked>
               <label for="apartments">Апартаменты</label>
             </p>
           </fieldset>
-          <fieldset class="filter-cost-per-day">
-            <legend class="cost-per-day">Стоимость в сутки (Р):</legend>
-            <p>
-              <label for="from">от:</label>
-              <input type="number" id="from" name="cost-from" value="0">
-              <label for="to">до:</label>
-              <input type="number" id="to" name="cost-to" value="3000">
-            </p>
-            <div class="range">
-              <div class="range-min"></div>
-              <div class="range-max"></div>
+          <div class="filter-range">
+            <div class="filter-range-title">Стоимость в сутки (р):</div>
+            <div class="price-controls">
+              <label class="min-price">от <input type="number" name="min-price" value="0"></label>
+              <label class="max-price">до <input type="number" name="max-price" value="3000"></label>
             </div>
-            <input class="button-show" type="submit" value="Показать">
-          </fieldset>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
+            <button class="btn-transparent" type="submit">Показать</button>
+          </div>
         </form>
         <div class="filter-string">
           <b class="founded">Найдено: 3</b>
@@ -77,8 +78,8 @@
             <li><a href="#">по типу</a></li>
             <li><a href="#">по рейтингу</a></li>
           </ul>
-          <button class="arrow-up" type="button">Сортировка по возрастанию</button>
-          <button class="arrow-down" type="button">Сортировка по убыванию</button>
+          <button class="arrow-up" type="button"></button>
+          <button class="arrow-down active-arrow-down" type="button"></button>
         </div>
           <article class="hotel-card">
             <img src="img/amara-resort-spa.jpg" width="135" height="90" alt="Фото отеля Amara Resort & Spa">
@@ -141,7 +142,7 @@
       <footer class="footer-back">
         <p class="phone">
           #VisitSedona<br>
-          Тел: <a href="tel: +74956660266">+7(495) 666-02-66</a>
+          Тел: <a href="tel:+74956660266">+7(495) 666-02-66</a>
         </p>
         <ul class="contacts">
           <li>

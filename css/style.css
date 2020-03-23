@@ -13,6 +13,10 @@ a {
     text-decoration: none;
 }
 
+fieldset {
+    border: none;
+}
+
 .container {
     width: 1200px;
     margin: auto;
@@ -168,6 +172,15 @@ a {
     flex-direction: row-reverse;
 }
 
+.devils-bridge .description {
+    padding-right: 45px;
+    padding-left: 45px;
+}
+
+.devils-bridge .reason-essence {
+    width: 310px;
+}
+
 .description,
 .small-area,
 .sightly-road,
@@ -196,11 +209,15 @@ a {
 .small-area p,
 .sightly-road p,
 .few-tourists p {
-    width: 275px;
+    width: 280px;
     margin-top: 26px;
     margin-right: auto;
     margin-bottom: 0px;
     margin-left: auto;
+}
+
+.few-tourists .reason-essence {
+    width: 255px;
 }
 
 .description-image {
@@ -393,10 +410,11 @@ a {
 .description-number {
     display: flex;
     height: 38px;
-    align-items: baseline;
+    align-items: center;
     width: 226px;
     margin: 0px;
     margin-bottom: 54px;
+    box-sizing: border-box;
 }
 
 .description-date label {
@@ -416,18 +434,40 @@ a {
     height: 38px;
     width: 346px;
     padding-top: 14px;
+    padding-right: 39px;
     padding-bottom: 13px;
     padding-left: 13px;
+    background-image: url("../img/calendar.svg");
+    background-position: 316px center;
+    background-repeat: no-repeat;
+}
+
+.description-date input:hover {
+    background-image: url("../img/calendar-hover.svg");
+}
+
+.description-date input:focus {
+    background-image: url("../img/calendar-active.svg");
 }
 
 .description-number input {
     box-sizing: border-box;
     height: 38px;
-    width: 114px;
+    width: 38px;
     min-height: 38px;
     text-align: center;
     vertical-align: middle;
 }
+
+.description-number input::-webkit-outer-spin-button,
+.description-number input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.description-number input[type=number] {
+    -moz-appearance: textfield;
+  }
 
 .description-number-children {
     text-align: right;
@@ -447,6 +487,57 @@ a {
 .index-form input:focus {
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
+}
+
+.description-number button {
+    outline:none;
+    -webkit-appearance: none;
+    background-color: #f2f2f2;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+
+.number-minus::before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 3px;
+    background-color: #a8a8a8;
+    transform: translate(-50%, -50%);
+}
+
+.number-plus::before,
+.number-plus::after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 3px;
+    background-color: #a8a8a8;
+    transform: translate(-50%, -50%);
+}
+
+.number-plus::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-minus:hover::before,
+.number-plus:hover::before,
+.number-plus:hover::after {
+    background-color: #000000;
+}
+
+.number-minus:active::before,
+.number-plus:active::before,
+.number-plus:active::after {
+    background-color: #81b3d2;
 }
 
 .index-form input[type="submit"] {
@@ -482,6 +573,55 @@ a {
     background-image: url("../img/background-hotels.jpg");
     background-repeat: no-repeat;
     background-position: 0px -294px ;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.filter-infrastructure label,
+.filter-type-of-housing label {
+    padding-left: 40px;
+    cursor: pointer;
+} 
+
+.filter-infrastructure label::before,
+.filter-type-of-housing label::before {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    content: "";
+    margin-left: -40px;
+    background-image: url("../img/checkbox-off.svg");
+}
+
+.check-box:checked ~ label::before {
+    width: 27px;
+    height: 23px;
+    background-image: url("../img/checkbox-on.svg");
+}
+
+.check-box:disabled ~ label::before {
+    background-image: url("../img/checkbox-off-disabled.svg");
+}
+
+.check-box:checked:disabled ~ label::before {
+    background-image: url("../img/checkbox-on-disabled.svg");
+}
+
+.check-box:focus ~ label::before {
+    border: 1px dotted black;
+}
+
+.check-box:checked:disabled ~ label::before {
+    background-image: url("../img/checkbox-on-disabled.svg");
 }
 
 .filter-infrastructure,
@@ -537,25 +677,130 @@ a {
     text-align: left;
 }
 
-.button-show {
-    display: block;
-    width: 133px;
-    height: 32px;
-    margin-top: auto;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-left: auto;
+.filter-range {
+    width: 330px;
+    margin-left: auto;  
     color: #ffffff;
-    line-height: 21px;
-    text-align: center;
     text-transform: uppercase;
-    border: 2px solid #ffffff;
-    background-color: transparent;
 }
 
-.button-show:hover {
+.filter-range-title {
+    margin-bottom: 9px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+}
+  
+.price-controls {
+    position: relative;
+    height: 36px;
+    margin-bottom: 20px;
+    font-size: 0;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+}
+  
+.price-controls::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 22px;
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+}
+  
+.price-controls label {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 38px;
+    vertical-align: top;
+    cursor: pointer;
+}
+  
+.price-controls .min-price,
+.price-controls .max-price {
+    width: 90px;
+    padding-left: 65px;
+}
+  
+.price-controls input {
+    width: 50px;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: none;
+}
+ 
+.price-controls input::-webkit-outer-spin-button,
+.price-controls input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.price-controls input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+.range-controls {
+    position: relative;
+    margin-bottom: 32px;
+}
+  
+.range-controls .scale {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+  
+.range-controls .bar {
+    width: 80%;
+    height: 2px;
+    background: #ffffff;
+}
+  
+.range-toggle {
+    position: absolute;
+    top: -9px;   
+    width: 4px;
+    height: 4px;
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+}
+  
+.range-toggle:hover {
+    background: #1c4f80;
+}
+  
+.range-toggle-min {
+    left: 0;
+}
+  
+.range-toggle-max {
+    left: 80%;
+}
+  
+.btn-transparent {
+    display: block;
+    margin: 0 auto;
+    padding: 6px 35px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+  
+.btn-transparent:hover {
     color: #000000;
-    background-color: #ffffff;
+    background: #ffffff;
 }
 
 .filter-string {
@@ -627,12 +872,52 @@ a {
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: auto;
+    width: 11px;
+    height: 10px;
+    border:none;
+    background-color: transparent;
+    background-image: url("../img/icon-up-dir.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.arrow-up:hover {
+    background-image: url("../img/icon-up-dir-hover.svg");
+}
+
+.arrow-up:active {
+    background-image: url("../img/icon-up-dir-active.svg");
 }
 
 .arrow-down {
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 12px;
+    width: 11px;
+    height: 10px;
+    border:none;
+    background-color: transparent;
+    background-image: url("../img/icon-down-dir.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.arrow-down:hover {
+    background-image: url("../img/icon-down-dir-hover.svg");
+}
+
+.arrow-down:active {
+    background-image: url("../img/icon-down-dir-active.svg");
+}
+
+.active-arrow-down {
+    background-image: url("../img/icon-down-dir-active.svg");
+}
+
+.active-arrow-up {
+    background-image: url("../img/icon-up-dir-active.svg");
 }
 
 .hotel-card {
