@@ -13,10 +13,6 @@ a {
     text-decoration: none;
 }
 
-fieldset {
-    border: none;
-}
-
 .container {
     width: 1200px;
     margin: auto;
@@ -138,6 +134,7 @@ fieldset {
     background-repeat: no-repeat;
     width: 1200px;
     height: 59px;
+    vertical-align: middle;
     margin-top: -109px;
     margin-left: -300px;
 }
@@ -154,6 +151,7 @@ fieldset {
 
 .additional-reasons {
     display: flex;
+    flex-wrap: wrap;
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -274,7 +272,7 @@ fieldset {
 .lodging .reason-headline,
 .food .reason-headline,
 .souvenirs .reason-headline {
-    margin-top: 22px;
+    margin-top: 26px;
     margin-right: auto;
     margin-bottom: 0px;
     margin-left: auto;
@@ -294,6 +292,7 @@ fieldset {
     content: "";
     background-image: url("../img/icon-house.svg");
     background-repeat: no-repeat;
+    vertical-align: middle;
     width: 75px;
     height: 72px;
 }
@@ -303,6 +302,7 @@ fieldset {
     content: "";
     background-image: url("../img/icon-food.svg");
     background-repeat: no-repeat;
+    vertical-align: middle;
     width: 74px;
     height: 70px;
     margin-top: 2px;
@@ -313,6 +313,7 @@ fieldset {
     content: "";
     background-image: url("../img/icon-souvenir.svg");
     background-repeat: no-repeat;
+    vertical-align: middle;
     width: 64px;
     height: 76px;
     margin-top: -3px;
@@ -478,12 +479,16 @@ fieldset {
 
 .description-number input::-webkit-outer-spin-button,
 .description-number input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
 }
 
 .description-number input[type=number] {
+    -webkit-appearance: textfield;
     -moz-appearance: textfield;
+    appearance: textfield;
   }
 
 .description-number-children {
@@ -509,6 +514,8 @@ fieldset {
 .description-number button {
     outline:none;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     background-color: #f2f2f2;
     border: none;
     align-items: center;
@@ -526,6 +533,7 @@ fieldset {
     content: "";
     width: 12px;
     height: 3px;
+    vertical-align: middle;
     background-color: #a8a8a8;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -539,6 +547,7 @@ fieldset {
     content: "";
     width: 12px;
     height: 3px;
+    vertical-align: middle;
     background-color: #a8a8a8;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -621,6 +630,9 @@ fieldset {
     content: "";
     margin-left: -40px;
     background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid transparent;
 }
 
 .check-box:checked ~ label::before {
@@ -654,6 +666,7 @@ fieldset {
 
 .filter-infrastructure,
 .filter-type-of-housing {
+    border: none;
     margin-top: 7px;
 }
 
@@ -769,12 +782,16 @@ fieldset {
  
 .price-controls input::-webkit-outer-spin-button,
 .price-controls input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
 }
 
 .price-controls input[type=number] {
+    -webkit-appearance: textfield;
     -moz-appearance: textfield;
+    appearance: textfield;
   }
 
 .range-controls {
@@ -1032,6 +1049,7 @@ fieldset {
     line-height: 27px;
     background-color: #81b3d2;
     text-align: center;
+    vertical-align: middle;
 }
 
 .detail-button:hover {
@@ -1051,6 +1069,7 @@ fieldset {
     font-weight: bold;
     line-height: 27px;
     text-align: center;
+    vertical-align: middle;
     background-color: #766357;
 }
 
