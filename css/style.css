@@ -109,7 +109,7 @@ fieldset {
 }
 
 .headline {
-    width: 440px;
+    width: 441px;
     margin-top: 0px;
     margin-right: auto;
     margin-bottom: 0px;
@@ -194,6 +194,11 @@ fieldset {
     box-sizing: border-box;
 }
 
+.real-city .description {
+    padding-right: 59px;
+    padding-left: 59px;
+}
+
 .description h3,
 .small-area h3,
 .sightly-road h3,
@@ -214,6 +219,11 @@ fieldset {
     margin-right: auto;
     margin-bottom: 0px;
     margin-left: auto;
+}
+
+/* IE кроссбраузерность */
+.real-city .reason-essence {
+    width: 282px;
 }
 
 .few-tourists .reason-essence {
@@ -433,9 +443,7 @@ fieldset {
     box-sizing: border-box;
     height: 38px;
     width: 346px;
-    padding-top: 14px;
     padding-right: 39px;
-    padding-bottom: 13px;
     padding-left: 13px;
     background-image: url("../img/calendar.svg");
     background-position: 316px center;
@@ -511,6 +519,8 @@ fieldset {
     height: 3px;
     background-color: #a8a8a8;
     transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 
 .number-plus::before,
@@ -522,6 +532,8 @@ fieldset {
     height: 3px;
     background-color: #a8a8a8;
     transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 
 .number-plus::after {
@@ -732,6 +744,8 @@ fieldset {
     font: inherit;
     background: none;
     border: none;
+    height: 10px;
+    line-height: 10px;
 }
  
 .price-controls input::-webkit-outer-spin-button,
@@ -808,6 +822,7 @@ fieldset {
     align-items: center;
     width: 1200px;
     min-height: 86px;
+    height: 80px; /* IE кроссбраузерность */
     padding-top: 5px;;
     padding-right: 72px;
     padding-bottom: 5px;
@@ -1058,6 +1073,7 @@ fieldset {
     justify-content: space-between;
     align-items: center;
     min-height: 120px;
+    height: 100px; /* IE кроссбраузерность */
     background-color: #ffffff;
     opacity: 0.9;
     padding-top: 0px;
