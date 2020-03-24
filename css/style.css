@@ -632,7 +632,7 @@ a {
     background-image: url("../img/checkbox-off.svg");
     background-repeat: no-repeat;
     background-position: center;
-    border: 1px solid transparent;
+    box-sizing: border-box;
 }
 
 .check-box:checked ~ label::before {
@@ -903,7 +903,7 @@ a {
 
 .sorting-filter a {
     color: rgba(0, 0, 0, 0.3);
-    text-decoration: underline dotted #81b3d2;
+    border-bottom: 1px dotted #81b3d2;
 }
 
 .sorting-filter a:hover {
@@ -912,12 +912,12 @@ a {
 
 .sorting-filter a:active {
     color: #000000;
-    text-decoration: none;
+    border-bottom: none;
 }
 
 .sorting-filter .active {
     color: #81b3d2;
-    text-decoration: none;
+    border-bottom: none;
 }
 
 .arrow-up {
@@ -974,16 +974,14 @@ a {
 
 .hotel-card {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding-top: 20px;
+    align-items: flex-start;
+    padding-top: 30px;
     padding-right: 72px;
     padding-bottom: 20px;
     padding-left: 72px;
     box-sizing: border-box;
     width: 1200px;
     min-height: 151px;
-    height: 120px;
     border-bottom: 1px solid #e5e5e5;
 }
 
